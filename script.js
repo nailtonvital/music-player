@@ -19,7 +19,7 @@ const songs = [{ "title": "Sahara", "artist": "Hensonn", "img": "img/sahara.jfif
     { "title": "In The Name of Love", "artist": "Martin Garrix, Bebe Rexha", "img": "img/in-the-name-of-love.jfif", "song": "music/Martin Garrix & Bebe Rexha - In The Name Of Love.mp3" },
 ]
 
-let songIndex = 5
+let songIndex = 0
 
 loadSong(songs[songIndex])
 
@@ -68,8 +68,8 @@ function nextSong() {
 
 function updateProgress(e) {
     const { duration, currentTime } = e.srcElement
-    current.innerHTML = (currentTime/60).toFixed(2)
-    dur.innerHTML = (duration/60).toFixed(2)
+    current.innerHTML = Math.floor(currentTime / 60) +":"+ Math.floor(currentTime) %60;
+    dur.innerHTML = Math.floor(duration / 60) + ":" + Math.floor(duration) % 60;
     if(!duration){
         dur.innerHTML ="0.00"
     }
