@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');
+
+:root{
+    --card-color : rgb(46, 46, 57);
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    font-family: 'Montserrat', inter, sans-serif;
+    background-image: linear-gradient(
+        0deg,
+        rgb(13, 13, 31) 34%,
+         rgb(32, 32, 40) 98%);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-container{
+    background-color: var(--card-color);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.img-container img{
+    border-radius: 10px;
+    height: 390px;
+}
+
+.title{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: x-large;
+    font-weight: 700;
+    padding-left: 5px;
+}
+
+.artist {
+    margin-top: -5px;
+    padding-left: 5px;
+    font-weight: 100;
+}
+
+.progress-container{
+    background-color: rgb(58, 58, 73);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+}
+
+.progress{
+    background-color: white;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.duration{
+    display: flex;
+    justify-content: space-between;
+}
+
+.duration p{
+    padding-inline: 2px;
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+}
+
+.action-btn, .action-btn-big{
+    margin-inline: 10px;
+    background-color: var(--card-color);
+    color: white;
+    border-style: none;
+}
+.action-btn {
+    font-size: 30px;
+}
+
+.action-btn-big{
+    font-size: 45px;
+}
